@@ -1,4 +1,3 @@
-import csv
 import pandas
 
 def write(data, file="output.csv", header=False, columns=None, index=False, index_in_list=False, mode="wb", sep=","):

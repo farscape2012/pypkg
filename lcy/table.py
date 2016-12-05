@@ -15,9 +15,7 @@ def write(data, file="output.csv", header=False, columns=None, index=False, inde
     Returns:
         Nothing.
     Raises:
-        TypeError: if n is not a number.
-        ValueError: if n is negative.
-
+        None
     """
     if type(data) != pandas.core.frame.DataFrame:
         if index_in_list:
@@ -43,11 +41,6 @@ def read(file="input.csv", sep=",", header=None, names=None, index_col=None, use
         
     Returns:
         Nothing.
-    Raises:
-        TypeError: if n is not a number.
-        ValueError: if n is negative.
-    # names = colnames
-    # usecols = index or colnames in names
     """
     df = pandas.read_table(file, sep=sep, header=header, names=names, index_col=index_col, usecols=usecols, comment=comment)
     return df

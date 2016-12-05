@@ -7,7 +7,7 @@ def write(data, file="output.csv", columns=None, index_in_list=False, mode="wb",
         index = [i[0] for i in data] 
         data = [i[1:] for i in data]
     else:
-        index = None
+        index = False
     df = pandas.DataFrame(data, columns=columns, index=index)
     #Now you have a csv with columns and index:
     df.to_csv(file, mode=mode, sep=sep)
